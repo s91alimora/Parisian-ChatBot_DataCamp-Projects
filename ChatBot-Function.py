@@ -6,8 +6,10 @@ from openai import OpenAI
 client = OpenAI(api_key=os.environ["OPENAI"])
 
 def chatbot():  # Function name
+    """A function that asks the user for a desired GPT model and to input a question from a predefined question set.
+        Then, the function uses the desired model to print a conversation starting with the input question."""
     
-    # The system prompt to be passed to the client later.
+    # The system prompts to be passed to the client later.
     # This will provide context for the LLM to operate.
     sys_prompt = """You are a knowledgeable travel guide expert specialized in Paris landmarks.
                     Provide concise and accurate responses to questions about Paris.
